@@ -101,6 +101,7 @@ def main(argv):
 		f = open(os.path.expanduser(os.path.join('~', '.ssh', 'known_hosts')), 'a')
 		for line in instance_ssh_key_tmp:
         		f.write(line.rstrip())
+		f.write('\n')
 		f.close()
 		print 'SSH public key added to known_hosts\n'
 	else:

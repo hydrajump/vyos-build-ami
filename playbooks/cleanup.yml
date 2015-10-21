@@ -21,7 +21,7 @@
       delay: 20
 
     - name: Delete security group
-      command: aws ec2 delete-security-group --group-name {{ security_group_name }}
+      command: aws ec2 delete-security-group --group-id {{ describe_group_id.stdout }}
 
     - name: Delete SSH key pair
       command: aws ec2 delete-key-pair --key-name {{ key_pair_name }}
@@ -30,4 +30,4 @@
       command: rm -f {{ key_pair_file }}
 
     - name: Remove instance's SSH public key from known_hosts
-      command: ssh-keygen -R {{ instance_dns_name.stdout }}
+      command: ssh-keygen -R {{ instance_private_ip.stdout }}

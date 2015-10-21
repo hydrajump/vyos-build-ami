@@ -5,6 +5,10 @@
 
 # ---- Provision instance ----
 - include: provision-instance.yml
+  vars:
+    vpc_id: vpc-0009d965
+    pri_subnet_id: subnet-2f21d758
+    sec_subnet_id: subnet-5721d720
 
 
 # ---- Build disk ----
