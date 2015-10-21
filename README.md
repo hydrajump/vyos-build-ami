@@ -72,6 +72,7 @@ You will need the following:
     - Your AWS access key ID and secret access key
 - Ansible
 - `vyos-build-ami` playbooks
+- An AWS key pair without **ANY** spaces in the name
 
 
 ## Installation

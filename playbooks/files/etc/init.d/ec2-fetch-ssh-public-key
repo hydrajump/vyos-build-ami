@@ -65,7 +65,7 @@ load_ssh_public_key ()
     # Tear down the session
 
     log_action_msg "EC2: Loaded ssh public key for user $username"
-    $LOADKEY $username $public_key_url
+    $LOADKEY $username "$public_key_url"
 
     # Commit and save to config.boot
     $COMMIT
